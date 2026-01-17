@@ -1,0 +1,425 @@
+/**
+ * 亮色主题CSS变量
+ * 当 data-theme="light" 或默认时生效
+ */
+
+:root,
+[data-theme="light"] {
+  /* ==================== 背景色系统 ==================== */
+
+  /* 主背景 - 深灰色护眼渐变 */
+  --bg-primary: linear-gradient(135deg, #c8cad3 0%, #b8bac8 100%);
+  --bg-primary-solid: #c8cad3;
+
+  /* 次级背景 - 中灰色 */
+  --bg-secondary: #d5d7e0;
+  --bg-tertiary: #cecfd9;
+  --bg-elevated: #d5d7e0;
+  --bg-hover: #c8cad3;
+
+  /* 卡片背景 - 半透明深灰色 */
+  --card-bg: rgba(213, 215, 224, 0.85);
+  --card-hover: rgba(213, 215, 224, 0.95);
+
+  /* ==================== 文本色系统 ==================== */
+
+  /* 主文本 - 柔和的深灰色 */
+  --text-primary: #3d4451;
+  --text-primary-rgb: 61, 68, 81;
+
+  /* 次级文本 - 中灰色 */
+  --text-secondary: #5a6270;
+  --text-tertiary: #707886;
+  --text-quaternary: #8b92a0;
+  --text-disabled: #a5abb8;
+
+  /* 文本透明度变体 */
+  --text-muted: rgba(61, 68, 81, 0.7);
+  --text-subtle: rgba(61, 68, 81, 0.5);
+
+  /* ==================== 边框色系统 ==================== */
+
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(0, 0, 0, 0.2);
+  --border-focus: rgba(102, 126, 234, 0.5);
+
+  /* ==================== Glass Morphism 亮色版 ==================== */
+
+  /* 玻璃态背景 - 深灰色半透明效果 */
+  --glass-bg: rgba(213, 215, 224, 0.65);
+  --glass-bg-hover: rgba(213, 215, 224, 0.8);
+
+  /* 玻璃态边框 - 中性边框 */
+  --glass-border: rgba(120, 130, 150, 0.25);
+  --glass-border-strong: rgba(120, 130, 150, 0.35);
+
+  /* 玻璃态阴影 */
+  --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  --glass-shadow-lg: 0 20px 60px rgba(31, 38, 135, 0.2);
+
+  /* ==================== 功能色（保持品牌一致性）==================== */
+
+  /* 主色调 */
+  --primary-color: #667eea;
+  --primary-dark: #764ba2;
+  --primary-light: #8b9fef;
+
+  /* 成功色 */
+  --success-color: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.1);
+  --success-border: rgba(16, 185, 129, 0.3);
+
+  /* 警告色 */
+  --warning-color: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --warning-border: rgba(245, 158, 11, 0.3);
+
+  /* 错误色 */
+  --error-color: #ef4444;
+  --error-bg: rgba(239, 68, 68, 0.1);
+  --error-border: rgba(239, 68, 68, 0.3);
+
+  /* 信息色 */
+  --info-color: #3b82f6;
+  --info-bg: rgba(59, 130, 246, 0.1);
+  --info-border: rgba(59, 130, 246, 0.3);
+
+  /* ==================== 输入框样式 ==================== */
+
+  --input-bg: #d5d7e0;
+  --input-border: #a8aab8;
+  --input-text: #3d4451;
+  --input-placeholder: #8b92a0;
+
+  --input-focus-bg: #dfe1ea;
+  --input-focus-border: rgba(102, 126, 234, 0.5);
+
+  --input-disabled-bg: #cecfd9;
+  --input-disabled-text: #787a88;
+
+  /* ==================== 按钮样式 ==================== */
+
+  /* 主按钮 */
+  --button-primary-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --button-primary-hover: linear-gradient(135deg, #7589ed 0%, #8558af 100%);
+  --button-primary-text: #ffffff;
+
+  /* 次级按钮 */
+  --button-secondary-bg: #cecfd9;
+  --button-secondary-hover: #b8bac8;
+  --button-secondary-text: #3d4451;
+
+  /* 幽灵按钮 */
+  --button-ghost-bg: transparent;
+  --button-ghost-border: #a8aab8;
+  --button-ghost-hover: #d5d7e0;
+
+  /* 按钮禁用 */
+  --button-disabled-bg: #cecfd9;
+  --button-disabled-text: #9a9ca8;
+
+  /* ==================== 表格样式 ==================== */
+
+  --table-header-bg: #c8cad3;
+  --table-row-bg: #d5d7e0;
+  --table-row-hover: #cecfd9;
+  --table-row-selected: rgba(102, 126, 234, 0.15);
+
+  /* 斑马纹 */
+  --table-stripe-bg: #cecfd9;
+
+  /* ==================== 阴影系统 ==================== */
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+  /* ==================== 覆盖层 ==================== */
+
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --modal-backdrop: rgba(0, 0, 0, 0.3);
+
+  /* ==================== 滚动条样式 ==================== */
+
+  --scrollbar-track: #cecfd9;
+  --scrollbar-thumb: #a8aab8;
+  --scrollbar-thumb-hover: #888a98;
+
+  /* ==================== 代码/终端样式 ==================== */
+
+  --code-bg: #cecfd9;
+  --code-text: #3d4451;
+  --code-border: #a8aab8;
+
+  /* ==================== 徽章样式 ==================== */
+
+  --badge-bg: #cecfd9;
+  --badge-text: #3d4451;
+  --badge-border: #a8aab8;
+
+  /* ==================== 分隔线 ==================== */
+
+  --divider-color: rgba(0, 0, 0, 0.1);
+  --divider-strong: rgba(0, 0, 0, 0.2);
+
+  /* ==================== 特殊效果 ==================== */
+
+  /* 渐变背景 */
+  --gradient-primary: linear-gradient(135deg,
+      rgba(102, 126, 234, 0.1) 0%,
+      rgba(118, 75, 162, 0.1) 100%);
+
+  /* 发光效果 */
+  --glow-primary: 0 0 20px rgba(102, 126, 234, 0.2);
+  --glow-success: 0 0 20px rgba(16, 185, 129, 0.2);
+  --glow-warning: 0 0 20px rgba(245, 158, 11, 0.2);
+  --glow-error: 0 0 20px rgba(239, 68, 68, 0.2);
+}
+
+/* ==================== 亮色模式专用样式覆盖 ==================== */
+
+[data-theme="light"] body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* 滚动条亮色样式 */
+[data-theme="light"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* 选中文本样式 */
+[data-theme="light"] ::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: #3d4451;
+}
+
+/* 链接样式 */
+[data-theme="light"] a {
+  color: var(--primary-color);
+}
+
+[data-theme="light"] a:hover {
+  color: var(--primary-dark);
+}
+
+/* 代码块样式 */
+[data-theme="light"] code,
+[data-theme="light"] pre {
+  background: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid var(--code-border);
+}
+
+/* ==================== Element Plus 组件覆盖 ==================== */
+
+/* 🔥 亮色模式全局覆盖 - 覆盖深色默认样式 */
+[data-theme="light"] .el-select-dropdown,
+[data-theme="light"] .el-select-dropdown.el-popper,
+[data-theme="light"] .el-popper.is-light {
+  background-color: #d5d7e0 !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .el-select-dropdown__item {
+  color: #3d4451 !important;
+  background-color: transparent !important;
+}
+
+[data-theme="light"] .el-select-dropdown__item:hover {
+  background-color: rgba(213, 215, 224, 0.8) !important;
+}
+
+[data-theme="light"] .el-picker-panel,
+[data-theme="light"] .el-picker__popper,
+[data-theme="light"] .el-date-picker {
+  background-color: #d5d7e0 !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #3d4451 !important;
+}
+
+[data-theme="light"] .el-picker-panel__sidebar {
+  background-color: #d5d7e0 !important;
+  border-right-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .el-picker-panel__shortcut,
+[data-theme="light"] .el-date-picker__header-label,
+[data-theme="light"] .el-picker-panel__icon-btn,
+[data-theme="light"] .el-date-table td,
+[data-theme="light"] .el-date-table th,
+[data-theme="light"] .el-date-table-cell__text {
+  color: #3d4451 !important;
+}
+
+[data-theme="light"] .el-picker-panel__content,
+[data-theme="light"] .el-picker-panel__body,
+[data-theme="light"] .el-date-picker__header {
+  background-color: #d5d7e0 !important;
+}
+
+/* 下拉菜单 - 增强优先级 */
+.el-select-dropdown.el-popper[data-theme="light"],
+[data-theme="light"] .el-select-dropdown.el-popper,
+[data-theme="light"] .el-select-dropdown {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.el-select-dropdown__item[data-theme="light"],
+[data-theme="light"] .el-select-dropdown__item {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-select-dropdown__item:hover[data-theme="light"],
+[data-theme="light"] .el-select-dropdown__item:hover {
+  background-color: var(--glass-bg-hover) !important;
+}
+
+.el-select-dropdown__item.is-selected[data-theme="light"],
+[data-theme="light"] .el-select-dropdown__item.is-selected {
+  color: var(--primary-color) !important;
+}
+
+.el-select-dropdown__list[data-theme="light"],
+[data-theme="light"] .el-select-dropdown__list {
+  background-color: var(--bg-elevated) !important;
+}
+
+/* 日期选择器 - 增强优先级 */
+.el-picker-panel.el-popper[data-theme="light"],
+[data-theme="light"] .el-picker-panel.el-popper,
+[data-theme="light"] .el-picker-panel {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-picker__popper.el-popper[data-theme="light"],
+[data-theme="light"] .el-picker__popper.el-popper,
+[data-theme="light"] .el-picker__popper {
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-date-picker__header[data-theme="light"],
+[data-theme="light"] .el-date-picker__header {
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-date-picker__header-label[data-theme="light"],
+[data-theme="light"] .el-date-picker__header-label,
+.el-picker-panel__icon-btn[data-theme="light"],
+[data-theme="light"] .el-picker-panel__icon-btn {
+  color: var(--text-primary) !important;
+}
+
+.el-date-table td[data-theme="light"],
+[data-theme="light"] .el-date-table td {
+  color: var(--text-primary) !important;
+}
+
+.el-date-table td.available:hover[data-theme="light"],
+[data-theme="light"] .el-date-table td.available:hover {
+  color: var(--primary-color) !important;
+}
+
+.el-date-table td.current:not(.disabled)[data-theme="light"],
+[data-theme="light"] .el-date-table td.current:not(.disabled) {
+  color: var(--primary-color) !important;
+}
+
+.el-date-table th[data-theme="light"],
+[data-theme="light"] .el-date-table th {
+  color: var(--text-secondary) !important;
+}
+
+.el-picker-panel__content[data-theme="light"],
+[data-theme="light"] .el-picker-panel__content {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-date-table-cell__text[data-theme="light"],
+[data-theme="light"] .el-date-table-cell__text {
+  color: var(--text-primary) !important;
+}
+
+.el-date-range-picker__content[data-theme="light"],
+[data-theme="light"] .el-date-range-picker__content {
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-picker-panel__sidebar[data-theme="light"],
+[data-theme="light"] .el-picker-panel__sidebar {
+  background-color: var(--bg-elevated) !important;
+  border-right: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-picker-panel__shortcut[data-theme="light"],
+[data-theme="light"] .el-picker-panel__shortcut {
+  color: var(--text-primary) !important;
+}
+
+.el-picker-panel__body[data-theme="light"],
+[data-theme="light"] .el-picker-panel__body {
+  background-color: var(--bg-elevated) !important;
+}
+
+/* 输入框 */
+[data-theme="light"] .el-input__inner {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+}
+
+[data-theme="light"] .el-textarea__inner {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+}
+
+[data-theme="light"] .el-input__wrapper {
+  background-color: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .el-input__wrapper input {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .el-select__wrapper {
+  background-color: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .el-select__wrapper input {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .el-select__placeholder {
+  color: var(--text-subtle) !important;
+}
+
+[data-theme="light"] .el-select__selected-item {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .el-input__inner,
+[data-theme="light"] .el-select__input {
+  color: var(--text-primary) !important;
+}

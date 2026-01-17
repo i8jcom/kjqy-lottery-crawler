@@ -1,0 +1,1108 @@
+{
+  "lotteries": [
+    {
+      "lotCode": "10037",
+      "name": "极速赛车",
+      "interval": 75,
+      "priority": "high",
+      "endpoint": "speedylot88",
+      "apiEndpoint": "speedy10-result.php",
+      "historyEndpoint": "speedy10-result.php",
+      "enabled": true,
+      "source": "speedylot88",
+      "description": "SpeedyLot88官方数据源",
+      "tags": [
+        "极速彩",
+        "高频彩",
+        "赛车类"
+      ],
+      "drawRule": "",
+      "sourceId": "speedylot88",
+      "scraperKey": "jspk10",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "10035",
+      "name": "极速飞艇",
+      "interval": 75,
+      "priority": "high",
+      "endpoint": "speedylot88",
+      "apiEndpoint": "sbspeedy10-result.php",
+      "historyEndpoint": "sbspeedy10-result.php",
+      "enabled": true,
+      "source": "speedylot88",
+      "description": "SpeedyLot88官方数据源",
+      "tags": [
+        "极速彩",
+        "高频彩",
+        "赛车类"
+      ]
+    },
+    {
+      "lotCode": "10036",
+      "name": "极速时时彩",
+      "interval": 75,
+      "priority": "high",
+      "endpoint": "speedylot88",
+      "apiEndpoint": "speedy5-result.php",
+      "historyEndpoint": "speedy5-result.php",
+      "enabled": true,
+      "source": "speedylot88",
+      "description": "SpeedyLot88官方数据源",
+      "tags": [
+        "极速彩",
+        "高频彩",
+        "数字彩"
+      ]
+    },
+    {
+      "lotCode": "10052",
+      "name": "极速快3",
+      "interval": 75,
+      "priority": "high",
+      "endpoint": "speedylot88",
+      "apiEndpoint": "speedy3-result.php",
+      "historyEndpoint": "speedy3-result.php",
+      "enabled": true,
+      "source": "speedylot88",
+      "description": "SpeedyLot88官方数据源",
+      "tags": [
+        "极速彩",
+        "高频彩",
+        "快3"
+      ]
+    },
+    {
+      "lotCode": "10053",
+      "name": "极速快乐十分",
+      "interval": 75,
+      "priority": "high",
+      "endpoint": "speedylot88",
+      "apiEndpoint": "speedy8-result.php",
+      "historyEndpoint": "speedy8-result.php",
+      "enabled": true,
+      "source": "speedylot88",
+      "description": "SpeedyLot88官方数据源",
+      "tags": [
+        "极速彩",
+        "高频彩",
+        "快乐彩"
+      ]
+    },
+    {
+      "lotCode": "10054",
+      "name": "极速快乐8",
+      "interval": 75,
+      "priority": "high",
+      "endpoint": "speedylot88",
+      "apiEndpoint": "speedy20-result.php",
+      "historyEndpoint": "speedy20-result.php",
+      "enabled": true,
+      "source": "speedylot88",
+      "description": "SpeedyLot88官方数据源",
+      "tags": [
+        "极速彩",
+        "高频彩",
+        "快乐彩"
+      ]
+    },
+    {
+      "lotCode": "10055",
+      "name": "极速11选5",
+      "interval": 75,
+      "priority": "high",
+      "endpoint": "speedylot88",
+      "apiEndpoint": "speedy11-result.php",
+      "historyEndpoint": "speedy11-result.php",
+      "enabled": true,
+      "source": "speedylot88",
+      "description": "SpeedyLot88官方数据源",
+      "tags": [
+        "极速彩",
+        "高频彩",
+        "11选5"
+      ]
+    },
+    {
+      "lotCode": "20001",
+      "name": "SG飞艇",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "sglotteries",
+      "apiEndpoint": "/api/result/load-ft.php",
+      "historyEndpoint": "/api/result/load-ft.php",
+      "enabled": true,
+      "source": "sglotteries",
+      "description": "SG Lotteries官方数据源 - 10个号码",
+      "tags": [
+        "新加坡彩",
+        "高频彩",
+        "国际彩",
+        "赛车类"
+      ]
+    },
+    {
+      "lotCode": "20002",
+      "name": "SG时时彩",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "sglotteries",
+      "apiEndpoint": "/api/result/load-5d.php",
+      "historyEndpoint": "/api/result/load-5d.php",
+      "enabled": true,
+      "source": "sglotteries",
+      "description": "SG Lotteries官方数据源 - 5个号码",
+      "tags": [
+        "新加坡彩",
+        "高频彩",
+        "国际彩",
+        "数字彩"
+      ],
+      "drawRule": "",
+      "sourceId": "sglotteries",
+      "scraperKey": "sg5d",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "20003",
+      "name": "SG快3",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "sglotteries",
+      "apiEndpoint": "/api/result/load-quick3.php",
+      "historyEndpoint": "/api/result/load-quick3.php",
+      "enabled": true,
+      "source": "sglotteries",
+      "description": "SG Lotteries官方数据源 - 3个号码",
+      "tags": [
+        "新加坡彩",
+        "高频彩",
+        "国际彩",
+        "快3"
+      ]
+    },
+    {
+      "lotCode": "20004",
+      "name": "SG快乐十分",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "sglotteries",
+      "apiEndpoint": "/api/result/load-happy8.php",
+      "historyEndpoint": "/api/result/load-happy8.php",
+      "enabled": true,
+      "source": "sglotteries",
+      "description": "SG Lotteries官方数据源 - 8个号码",
+      "tags": [
+        "新加坡彩",
+        "高频彩",
+        "国际彩",
+        "快乐彩"
+      ],
+      "drawRule": "",
+      "sourceId": "sglotteries",
+      "scraperKey": "sghappy8",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "20005",
+      "name": "SG快乐8",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "sglotteries",
+      "apiEndpoint": "/api/result/load-happy20.php",
+      "historyEndpoint": "/api/result/load-happy20.php",
+      "enabled": true,
+      "source": "sglotteries",
+      "description": "SG Lotteries官方数据源 - 20个号码",
+      "tags": [
+        "新加坡彩",
+        "高频彩",
+        "国际彩",
+        "快乐彩"
+      ],
+      "drawRule": "",
+      "sourceId": "sglotteries",
+      "scraperKey": "sghappy20",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "20006",
+      "name": "SG 11选5",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "sglotteries",
+      "apiEndpoint": "/api/result/load-11x5.php",
+      "historyEndpoint": "/api/result/load-11x5.php",
+      "enabled": true,
+      "source": "sglotteries",
+      "description": "SG Lotteries官方数据源 - 5个号码",
+      "tags": [
+        "新加坡彩",
+        "高频彩",
+        "国际彩",
+        "11选5"
+      ]
+    },
+    {
+      "lotCode": "10098",
+      "name": "极速六合彩",
+      "interval": 300,
+      "priority": "medium",
+      "endpoint": "speedylot88",
+      "source": "speedylot88",
+      "enabled": true,
+      "description": "SpeedyLot88官方数据源",
+      "scraperKey": "jslhc",
+      "apiEndpoint": "mark6-result.php",
+      "historyEndpoint": "mark6-result.php",
+      "earlyFetch": 0,
+      "tags": [
+        "极速彩",
+        "中频彩",
+        "六合彩"
+      ],
+      "countdownBehavior": "use_official",
+      "schedulingStrategy": "official_countdown"
+    },
+    {
+      "lotCode": "30002",
+      "name": "澳洲幸运8",
+      "interval": 300,
+      "priority": "medium",
+      "endpoint": "auluckylotteries",
+      "apiEndpoint": "/results/lucky-ball-8/",
+      "historyEndpoint": "/results/lucky-ball-8/",
+      "enabled": true,
+      "source": "auluckylotteries",
+      "description": "AU Lucky Lotteries官方数据源 - 8个号码(1-20)",
+      "scraperKey": "lucky8",
+      "earlyFetch": 5,
+      "tags": [
+        "澳洲彩",
+        "中频彩",
+        "国际彩",
+        "幸运彩"
+      ]
+    },
+    {
+      "lotCode": "30003",
+      "name": "澳洲幸运10",
+      "interval": 300,
+      "priority": "medium",
+      "endpoint": "auluckylotteries",
+      "apiEndpoint": "/results/lucky-ball-10/",
+      "historyEndpoint": "/results/lucky-ball-10/",
+      "enabled": true,
+      "source": "auluckylotteries",
+      "description": "AU Lucky Lotteries官方数据源 - 10个号码(1-10)",
+      "scraperKey": "lucky10",
+      "earlyFetch": 5,
+      "tags": [
+        "澳洲彩",
+        "中频彩",
+        "国际彩",
+        "幸运彩"
+      ]
+    },
+    {
+      "lotCode": "30004",
+      "name": "澳洲幸运20",
+      "interval": 300,
+      "priority": "medium",
+      "endpoint": "auluckylotteries",
+      "apiEndpoint": "/results/lucky-ball-20/",
+      "historyEndpoint": "/results/lucky-ball-20/",
+      "enabled": true,
+      "source": "auluckylotteries",
+      "description": "AU Lucky Lotteries官方数据源 - 20个号码(1-80)",
+      "scraperKey": "lucky20",
+      "earlyFetch": -9,
+      "tags": [
+        "澳洲彩",
+        "中频彩",
+        "国际彩",
+        "幸运彩"
+      ]
+    },
+    {
+      "lotCode": "30001",
+      "name": "澳洲幸运5",
+      "interval": 300,
+      "priority": "medium",
+      "endpoint": "auluckylotteries",
+      "source": "auluckylotteries",
+      "enabled": true,
+      "description": "AU Lucky Lotteries官方数据源 - 5个号码(0-9)",
+      "scraperKey": "lucky5",
+      "apiEndpoint": "/results/lucky-ball-5/",
+      "historyEndpoint": "/results/lucky-ball-5/",
+      "earlyFetch": 10,
+      "tags": [
+        "澳洲彩",
+        "中频彩",
+        "国际彩",
+        "幸运彩"
+      ]
+    },
+    {
+      "lotCode": "40001",
+      "name": "幸运时时彩",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "luckysscai",
+      "apiEndpoint": "/index.php",
+      "historyEndpoint": "/index.php",
+      "enabled": true,
+      "source": "luckysscai",
+      "description": "LuckySscai官方数据源（早场10分钟/晚场5分钟）",
+      "scraperKey": "xyssc",
+      "salesDayStart": "00:05",
+      "salesDayEnd": "00:00",
+      "tags": [
+        "幸运彩",
+        "高频彩",
+        "时时彩"
+      ]
+    },
+    {
+      "lotCode": "50001",
+      "name": "幸运飞艇",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "luckylottoz",
+      "apiEndpoint": "/api/latest/getLotteryPksInfo.do?lotCode=10057",
+      "historyEndpoint": "/api/result/getPksHistoryList.do?lotCode=10057",
+      "enabled": true,
+      "source": "luckylottoz",
+      "description": "LuckyLottoz官方数据源（马耳他彩票，每5分钟一期）",
+      "scraperKey": "luckyairship",
+      "salesDayStart": "13:09",
+      "salesDayEnd": "04:04",
+      "tags": [
+        "幸运彩",
+        "高频彩",
+        "国际彩"
+      ]
+    },
+    {
+      "lotCode": "60001",
+      "name": "香港六合彩",
+      "interval": 86400,
+      "priority": "high",
+      "endpoint": "hkjc",
+      "apiEndpoint": "/marksix/markSixRealTime.js",
+      "historyEndpoint": "/marksix/markSixRealTime.js",
+      "enabled": true,
+      "source": "hkjc",
+      "description": "On.cc 东网官方数据源（每周二、四、六晚9:30开奖）",
+      "scraperKey": "hklhc",
+      "tags": [
+        "官方彩",
+        "低频彩",
+        "香港彩",
+        "六合彩"
+      ]
+    },
+    {
+      "lotCode": "70001",
+      "name": "福彩双色球",
+      "interval": 259200,
+      "priority": "high",
+      "endpoint": "cwl",
+      "source": "cwl",
+      "apiEndpoint": "/cwl_admin/front/cwlkj/search/kjxx/findDrawNotice",
+      "historyEndpoint": "/cwl_admin/front/cwlkj/search/kjxx/findDrawNotice",
+      "enabled": true,
+      "scraperKey": "ssq",
+      "description": "中国福彩官网数据源（每周二、四、日晚9:15开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          2,
+          4,
+          0
+        ],
+        "drawTime": "21:15",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 10
+      },
+      "tags": [
+        "福彩",
+        "官方彩",
+        "低频彩",
+        "双色球"
+      ]
+    },
+    {
+      "lotCode": "70002",
+      "name": "福彩3D",
+      "interval": 86400,
+      "priority": "medium",
+      "endpoint": "cwl",
+      "source": "cwl",
+      "apiEndpoint": "/cwl_admin/front/cwlkj/search/kjxx/findDrawNotice",
+      "historyEndpoint": "/cwl_admin/front/cwlkj/search/kjxx/findDrawNotice",
+      "enabled": true,
+      "scraperKey": "fc3d",
+      "description": "中国福彩官网数据源（每天晚9:15开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:15",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 10
+      },
+      "tags": [
+        "福彩",
+        "官方彩",
+        "中频彩",
+        "数字彩"
+      ]
+    },
+    {
+      "lotCode": "70003",
+      "name": "福彩七乐彩",
+      "interval": 172800,
+      "priority": "medium",
+      "endpoint": "cwl",
+      "source": "cwl",
+      "apiEndpoint": "/cwl_admin/front/cwlkj/search/kjxx/findDrawNotice",
+      "historyEndpoint": "/cwl_admin/front/cwlkj/search/kjxx/findDrawNotice",
+      "enabled": true,
+      "scraperKey": "qlc",
+      "description": "中国福彩官网数据源（每周一、三、五晚9:30开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          1,
+          3,
+          5
+        ],
+        "drawTime": "21:30",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 10
+      },
+      "tags": [
+        "福彩",
+        "官方彩",
+        "低频彩",
+        "七乐彩"
+      ]
+    },
+    {
+      "lotCode": "70004",
+      "name": "福彩快乐8",
+      "interval": 600,
+      "priority": "high",
+      "endpoint": "cwl",
+      "source": "cwl",
+      "apiEndpoint": "/LuckTwenty/getBaseLuckTwentyList.do",
+      "historyEndpoint": "/LuckTwenty/getBaseLuckTwentyList.do",
+      "enabled": true,
+      "scraperKey": "kl8",
+      "description": "免费API数据源（高频彩，免费无限制）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:15",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 10
+      },
+      "tags": [
+        "福彩",
+        "官方彩",
+        "高频彩",
+        "快乐彩"
+      ]
+    },
+    {
+      "lotCode": "80001",
+      "name": "超级大乐透",
+      "interval": 259200,
+      "priority": "medium",
+      "endpoint": "sportslottery",
+      "source": "sportslottery",
+      "enabled": true,
+      "scraperKey": "85",
+      "description": "中国体彩官网数据源（每周一、三、六晚9:25开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          1,
+          3,
+          6
+        ],
+        "drawTime": "21:25",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 10
+      },
+      "tags": [
+        "体彩",
+        "官方彩",
+        "低频彩",
+        "大乐透"
+      ]
+    },
+    {
+      "lotCode": "80002",
+      "name": "排列3",
+      "interval": 86400,
+      "priority": "medium",
+      "endpoint": "sportslottery",
+      "source": "sportslottery",
+      "enabled": true,
+      "scraperKey": "35",
+      "description": "中国体彩官网数据源（每天晚9:25开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:25",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 2
+      },
+      "tags": [
+        "体彩",
+        "官方彩",
+        "中频彩",
+        "数字彩"
+      ]
+    },
+    {
+      "lotCode": "80003",
+      "name": "排列5",
+      "interval": 86400,
+      "priority": "medium",
+      "endpoint": "sportslottery",
+      "source": "sportslottery",
+      "enabled": true,
+      "scraperKey": "35",
+      "description": "中国体彩官网数据源（每天晚9:25开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:25",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 2
+      },
+      "tags": [
+        "体彩",
+        "官方彩",
+        "中频彩",
+        "数字彩"
+      ]
+    },
+    {
+      "lotCode": "80004",
+      "name": "七星彩",
+      "interval": 259200,
+      "priority": "medium",
+      "endpoint": "sportslottery",
+      "source": "sportslottery",
+      "enabled": true,
+      "scraperKey": "04",
+      "description": "中国体彩官网数据源（每周二、五、日晚9:25开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          2,
+          5,
+          0
+        ],
+        "drawTime": "21:25",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 10
+      },
+      "tags": [
+        "体彩",
+        "官方彩",
+        "低频彩",
+        "七星彩"
+      ]
+    },
+    {
+      "lotCode": "90001",
+      "name": " 英国乐透5",
+      "interval": 150,
+      "priority": "medium",
+      "endpoint": "uklottos",
+      "source": "uklottos",
+      "enabled": true,
+      "scraperKey": "lotto5",
+      "description": "UK Lottos官方数据源 - 5个号码(0-9)，每2.5分钟一期",
+      "tags": [
+        "英国彩",
+        "高频彩",
+        "国际彩",
+        "UK Lottos"
+      ],
+      "drawRule": "",
+      "sourceId": "uklottos",
+      "apiEndpoint": "",
+      "historyEndpoint": "",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "90002",
+      "name": "英国乐透8",
+      "interval": 150,
+      "priority": "medium",
+      "endpoint": "uklottos",
+      "source": "uklottos",
+      "enabled": true,
+      "scraperKey": "lotto8",
+      "description": "UK Lottos官方数据源 - 8个号码(0-9)，每2.5分钟一期",
+      "tags": [
+        "英国彩",
+        "高频彩",
+        "国际彩",
+        "UK Lottos"
+      ],
+      "drawRule": "",
+      "sourceId": "uklottos",
+      "apiEndpoint": "",
+      "historyEndpoint": "",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "90003",
+      "name": "英国乐透10",
+      "interval": 150,
+      "priority": "medium",
+      "endpoint": "uklottos",
+      "source": "uklottos",
+      "enabled": true,
+      "scraperKey": "lotto10",
+      "description": "UK Lottos官方数据源 - 10个号码(0-9)，每2.5分钟一期",
+      "tags": [
+        "英国彩",
+        "高频彩",
+        "国际彩",
+        "UK Lottos"
+      ]
+    },
+    {
+      "lotCode": "90004",
+      "name": "英国乐透20",
+      "interval": 150,
+      "priority": "medium",
+      "endpoint": "uklottos",
+      "source": "uklottos",
+      "enabled": true,
+      "scraperKey": "lotto20",
+      "description": "UK Lottos官方数据源 - 20个号码(0-9)，每2.5分钟一期",
+      "tags": [
+        "英国彩",
+        "高频彩",
+        "国际彩",
+        "UK Lottos"
+      ]
+    },
+    {
+      "lotCode": "100001",
+      "name": "台湾威力彩",
+      "scraperKey": "lotto649",
+      "interval": 604800,
+      "priority": "medium",
+      "endpoint": "taiwanlottery",
+      "apiEndpoint": "/lotto/result/lotto649",
+      "historyEndpoint": "/lotto/result/lotto649/history",
+      "enabled": true,
+      "source": "taiwanlottery",
+      "description": "台湾彩票官方数据源 - 威力彩（6+1，每周一、四晚9:30开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          1,
+          4
+        ],
+        "drawTime": "21:30",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 90
+      },
+      "tags": [
+        "台湾彩票",
+        "双色球",
+        "威力彩"
+      ],
+      "drawRule": "",
+      "sourceId": "taiwanlottery",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "100002",
+      "name": "台湾大乐透",
+      "scraperKey": "biglotto",
+      "interval": 604800,
+      "priority": "medium",
+      "endpoint": "taiwanlottery",
+      "apiEndpoint": "/lotto/result/lotto",
+      "historyEndpoint": "/lotto/result/lotto/history",
+      "enabled": true,
+      "source": "taiwanlottery",
+      "description": "台湾彩票官方数据源 - 大乐透（6+1，每周二、五晚9:30开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          2,
+          5
+        ],
+        "drawTime": "21:30",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 90
+      },
+      "tags": [
+        "台湾彩票",
+        "大乐透"
+      ],
+      "drawRule": "",
+      "sourceId": "taiwanlottery",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "100003",
+      "name": "台湾今彩539",
+      "scraperKey": "daily539",
+      "interval": 86400,
+      "priority": "medium",
+      "endpoint": "taiwanlottery",
+      "apiEndpoint": "/lotto/result/daily539",
+      "historyEndpoint": "/lotto/result/daily539/history",
+      "enabled": true,
+      "source": "taiwanlottery",
+      "description": "台湾彩票官方数据源 - 今彩539（5个号码，每天晚9:30开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:30",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 90
+      },
+      "tags": [
+        "台湾彩票",
+        "每日彩"
+      ],
+      "drawRule": "",
+      "sourceId": "taiwanlottery",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "100005",
+      "name": "台湾3星彩",
+      "scraperKey": "lotto3d",
+      "interval": 86400,
+      "priority": "low",
+      "endpoint": "taiwanlottery",
+      "apiEndpoint": "/lotto/result/lotto3d",
+      "historyEndpoint": "/lotto/result/lotto3d/history",
+      "enabled": true,
+      "source": "taiwanlottery",
+      "description": "台湾彩票官方数据源 - 3D（3个号码，每天晚9:30开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:30",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 90
+      },
+      "tags": [
+        "台湾彩票",
+        "3D"
+      ],
+      "drawRule": "",
+      "sourceId": "taiwanlottery",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "100006",
+      "name": "台湾4星彩",
+      "interval": 86400,
+      "priority": "low",
+      "endpoint": "taiwanlottery",
+      "apiEndpoint": "/lotto/result/lotto4d",
+      "historyEndpoint": "/lotto/result/lotto4d/history",
+      "enabled": true,
+      "source": "taiwanlottery",
+      "description": "台湾彩票官方数据源 - 4D（4个号码，每天晚9:30开奖）",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:30",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 90
+      },
+      "tags": [
+        "台湾彩票",
+        "4D"
+      ],
+      "drawRule": "",
+      "sourceId": "taiwanlottery",
+      "scraperKey": "lotto4d",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "100007",
+      "name": "台湾宾果",
+      "scraperKey": "bingo",
+      "interval": 300,
+      "priority": "high",
+      "endpoint": "taiwanlottery",
+      "apiEndpoint": "/lotto/result/bingo_bingo",
+      "historyEndpoint": "/lotto/result/bingo_bingo/history",
+      "enabled": true,
+      "source": "taiwanlottery",
+      "description": "台湾彩票官方数据源 - 宾果宾果（20个号码，每5分钟一期，07:05-23:55）",
+      "drawSchedule": {
+        "mode": "interval",
+        "intervalSeconds": 300,
+        "startTime": "07:05",
+        "endTime": "23:55",
+        "triggerBeforeSeconds": 10
+      },
+      "tags": [
+        "台湾彩票",
+        "宾果",
+        "高频彩"
+      ],
+      "drawRule": "",
+      "sourceId": "taiwanlottery",
+      "customApiUrl": "",
+      "customApiKey": "",
+      "expectedPerDay": 202
+    },
+    {
+      "lotCode": "100008",
+      "name": "39樂合彩",
+      "interval": 86400,
+      "priority": "low",
+      "endpoint": "taiwanlottery",
+      "source": "taiwanlottery",
+      "enabled": true,
+      "description": "台湾彩票官方数据源 - 39选5（5个号码，每天一期，周日除外）",
+      "scraperKey": "39m5",
+      "apiEndpoint": "39M5Result",
+      "historyEndpoint": "39M5Result",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:30",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 90
+      },
+      "tags": [
+        "台湾彩票",
+        "39选5",
+        "中频彩"
+      ],
+      "drawRule": "",
+      "sourceId": "taiwanlottery",
+      "customApiUrl": "",
+      "customApiKey": ""
+    },
+    {
+      "lotCode": "100009",
+      "name": "49樂合彩",
+      "interval": 86400,
+      "priority": "low",
+      "endpoint": "taiwanlottery",
+      "source": "taiwanlottery",
+      "enabled": true,
+      "description": "台湾彩票官方数据源 - 49选6（6个号码，每天一期，周日除外）",
+      "scraperKey": "49m6",
+      "apiEndpoint": "49M6Result",
+      "historyEndpoint": "49M6Result",
+      "drawSchedule": {
+        "mode": "scheduled",
+        "drawDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "drawTime": "21:30",
+        "triggerBeforeMinutes": 3,
+        "dataDelayMinutes": 90
+      },
+      "tags": [
+        "台湾彩票",
+        "49选6",
+        "中频彩"
+      ],
+      "drawRule": "",
+      "sourceId": "taiwanlottery",
+      "customApiUrl": "",
+      "customApiKey": ""
+    }
+  ],
+  "endpointMap": {
+    "speedylot88": {
+      "baseUrl": "https://speedylot88.com",
+      "method": "html_scraping",
+      "description": "SpeedyLot88官方HTML爬取"
+    },
+    "sglotteries": {
+      "baseUrl": "https://sglotteries.com",
+      "method": "api_json",
+      "description": "SG Lotteries官方API"
+    },
+    "auluckylotteries": {
+      "baseUrl": "http://auluckylotteries.com",
+      "method": "html_scraping",
+      "description": "AU Lucky Lotteries官方HTML爬取"
+    },
+    "luckysscai": {
+      "baseUrl": "https://luckysscai.com",
+      "method": "html_scraping",
+      "description": "LuckySscai官方HTML爬取"
+    },
+    "luckylottoz": {
+      "baseUrl": "https://luckylottoz.com",
+      "method": "api_json",
+      "description": "LuckyLottoz官方API"
+    },
+    "hkjc": {
+      "baseUrl": "https://win.on.cc",
+      "method": "api_json",
+      "description": "On.cc 东网官方API"
+    },
+    "cwl": {
+      "baseUrl": "https://www.cwl.gov.cn",
+      "method": "api_json",
+      "description": "中国福彩官网API"
+    },
+    "sportslottery": {
+      "baseUrl": "https://webapi.sporttery.cn",
+      "method": "api_json",
+      "description": "中国体彩官网API"
+    },
+    "uklottos": {
+      "baseUrl": "https://www.uklottos.com",
+      "method": "api_json",
+      "description": "UK Lottos官网API"
+    },
+    "taiwanlottery": {
+      "baseUrl": "https://www.taiwanlottery.com",
+      "method": "html_parsing",
+      "description": "台湾彩票官网HTML解析"
+    }
+  },
+  "lotCodeToScraperKey": {
+    "10035": "jsft",
+    "10036": "jssc",
+    "10037": "jspk10",
+    "10052": "jsk3",
+    "10053": "jskl10",
+    "10054": "jskl8",
+    "10055": "js11x5",
+    "10098": "jslhc",
+    "20001": "sgairship",
+    "20002": "sg5d",
+    "20003": "sgquick3",
+    "20004": "sghappy8",
+    "20005": "sghappy20",
+    "20006": "sg11x5",
+    "30001": "lucky5",
+    "30002": "lucky8",
+    "30003": "lucky10",
+    "30004": "lucky20",
+    "40001": "xyssc",
+    "50001": "luckyairship",
+    "60001": "hklhc",
+    "70001": "ssq",
+    "70002": "fc3d",
+    "70003": "qlc",
+    "70004": "kl8",
+    "80001": "85",
+    "80002": "35",
+    "80003": "35",
+    "80004": "04",
+    "90001": "lotto5",
+    "90002": "lotto8",
+    "90003": "lotto10",
+    "90004": "lotto20",
+    "100001": "lotto649",
+    "100002": "biglotto",
+    "100003": "daily539",
+    "100005": "lotto3d",
+    "100006": "lotto4d",
+    "100007": "bingo",
+    "100008": "39m5",
+    "100009": "49m6"
+  },
+  "lastUpdated": "2026-01-06T00:44:02.159Z"
+}

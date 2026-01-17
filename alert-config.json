@@ -1,0 +1,20 @@
+{
+  "email": {
+    "enabled": false,
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "user": "test@gmail.com",
+    "pass": "testpass",
+    "from": "crawler@test.com",
+    "to": "admin@test.com"
+  },
+  "dingtalk": {
+    "enabled": false,
+    "webhook": "https://oapi.dingtalk.com/robot/send?access_token=TEST",
+    "secret": "SECtest123"
+  },
+  "wechat": {
+    "enabled": false,
+    "webhook": ""
+  }
+}

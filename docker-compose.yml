@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  # 爬虫服务
+  crawler-service:
+    build: .
+    container_name: lottery-crawler-compose
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - TZ=Asia/Shanghai
+      # 数据库配置
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USER=lottery
+      - DB_PASSWORD=lottery123
+      - DB_NAME=lottery_crawler
+      # 爬虫配置
+      - CRAWLER_PORT=4000
+      - CRAWLER_INTERVAL=300000
+      - MAX_RETRIES=3
+      # 调度器模式：continuous(持续轮询) / dynamic(倒计时) / fixed(固定间隔)
+      - SCHEDULER_MODE=continuous
+    volumes:
+      # 挂载源代码目录（开发模式）
+      - ./src:/app/src
+      # 挂载日志目录（持久化）
+      - ./logs:/app/logs
+      # 挂载配置文件（持久化）
+      - ./config:/app/config
+      # 挂载数据目录（持久化）
+      - ./data:/app/data
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - lottery-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:4000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # MySQL数据库
+  mysql:
+    image: mysql:8.0
+    container_name: lottery-mysql-compose
+    restart: unless-stopped
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123456
+      - MYSQL_DATABASE=lottery_crawler
+      - MYSQL_USER=lottery
+      - MYSQL_PASSWORD=lottery123
+      - TZ=Asia/Shanghai
+    volumes:
+      # 数据持久化
+      - mysql-data:/var/lib/mysql
+      # 初始化脚本
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      # MySQL配置
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf:ro
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-authentication-plugin=mysql_native_password
+    networks:
+      - lottery-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot123456"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+networks:
+  lottery-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local

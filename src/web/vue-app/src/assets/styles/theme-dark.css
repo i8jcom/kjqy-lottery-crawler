@@ -1,0 +1,486 @@
+/**
+ * 深色主题CSS变量
+ * 当 data-theme="dark" 时生效
+ */
+
+[data-theme="dark"] {
+  /* ==================== 背景色系统 ==================== */
+
+  /* 主背景 - 深蓝黑渐变 */
+  --bg-primary: linear-gradient(135deg, #0a0e27 0%, #0f0f1e 100%);
+  --bg-primary-solid: #0a0e27;
+
+  /* 次级背景 */
+  --bg-secondary: #0f0f1e;
+  --bg-tertiary: #16213e;
+  --bg-elevated: #1a1a2e;
+  --bg-hover: #1e2940;
+
+  /* 卡片背景 */
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-hover: rgba(255, 255, 255, 0.05);
+
+  /* ==================== 文本色系统 ==================== */
+
+  /* 主文本 */
+  --text-primary: #ffffff;
+  --text-primary-rgb: 255, 255, 255;
+
+  /* 次级文本 */
+  --text-secondary: #e0e0e0;
+  --text-tertiary: #b0b0b0;
+  --text-quaternary: #808080;
+  --text-disabled: #666666;
+
+  /* 文本透明度变体 */
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-subtle: rgba(255, 255, 255, 0.4);
+
+  /* ==================== 边框色系统 ==================== */
+
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --border-focus: rgba(102, 126, 234, 0.5);
+
+  /* ==================== Glass Morphism 深色版 ==================== */
+
+  /* 玻璃态背景 */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-hover: rgba(255, 255, 255, 0.08);
+
+  /* 玻璃态边框 */
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-strong: rgba(255, 255, 255, 0.15);
+
+  /* 玻璃态阴影 */
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --glass-shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.8);
+
+  /* ==================== 功能色（保持品牌一致性）==================== */
+
+  /* 主色调 */
+  --primary-color: #667eea;
+  --primary-dark: #764ba2;
+  --primary-light: #8b9fef;
+
+  /* 成功色 */
+  --success-color: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.1);
+  --success-border: rgba(16, 185, 129, 0.3);
+
+  /* 警告色 */
+  --warning-color: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --warning-border: rgba(245, 158, 11, 0.3);
+
+  /* 错误色 */
+  --error-color: #ef4444;
+  --error-bg: rgba(239, 68, 68, 0.1);
+  --error-border: rgba(239, 68, 68, 0.3);
+
+  /* 信息色 */
+  --info-color: #3b82f6;
+  --info-bg: rgba(59, 130, 246, 0.1);
+  --info-border: rgba(59, 130, 246, 0.3);
+
+  /* ==================== 输入框样式 ==================== */
+
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-text: #ffffff;
+  --input-placeholder: rgba(255, 255, 255, 0.4);
+
+  --input-focus-bg: rgba(255, 255, 255, 0.08);
+  --input-focus-border: rgba(102, 126, 234, 0.5);
+
+  --input-disabled-bg: rgba(255, 255, 255, 0.02);
+  --input-disabled-text: rgba(255, 255, 255, 0.3);
+
+  /* ==================== 按钮样式 ==================== */
+
+  /* 主按钮 */
+  --button-primary-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --button-primary-hover: linear-gradient(135deg, #7589ed 0%, #8558af 100%);
+  --button-primary-text: #ffffff;
+
+  /* 次级按钮 */
+  --button-secondary-bg: rgba(255, 255, 255, 0.1);
+  --button-secondary-hover: rgba(255, 255, 255, 0.15);
+  --button-secondary-text: #ffffff;
+
+  /* 幽灵按钮 */
+  --button-ghost-bg: transparent;
+  --button-ghost-border: rgba(255, 255, 255, 0.2);
+  --button-ghost-hover: rgba(255, 255, 255, 0.05);
+
+  /* 按钮禁用 */
+  --button-disabled-bg: rgba(255, 255, 255, 0.05);
+  --button-disabled-text: rgba(255, 255, 255, 0.3);
+
+  /* ==================== 表格样式 ==================== */
+
+  --table-header-bg: rgba(255, 255, 255, 0.05);
+  --table-row-bg: transparent;
+  --table-row-hover: rgba(255, 255, 255, 0.03);
+  --table-row-selected: rgba(102, 126, 234, 0.1);
+
+  /* 斑马纹 */
+  --table-stripe-bg: rgba(255, 255, 255, 0.02);
+
+  /* ==================== 阴影系统 ==================== */
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.7);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.8);
+
+  /* ==================== 覆盖层 ==================== */
+
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+  --modal-backdrop: rgba(0, 0, 0, 0.7);
+
+  /* ==================== 滚动条样式 ==================== */
+
+  --scrollbar-track: rgba(255, 255, 255, 0.05);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.3);
+
+  /* ==================== 代码/终端样式 ==================== */
+
+  --code-bg: rgba(0, 0, 0, 0.4);
+  --code-text: #e0e0e0;
+  --code-border: rgba(255, 255, 255, 0.1);
+
+  /* ==================== 徽章样式 ==================== */
+
+  --badge-bg: rgba(255, 255, 255, 0.1);
+  --badge-text: #ffffff;
+  --badge-border: rgba(255, 255, 255, 0.2);
+
+  /* ==================== 分隔线 ==================== */
+
+  --divider-color: rgba(255, 255, 255, 0.08);
+  --divider-strong: rgba(255, 255, 255, 0.15);
+
+  /* ==================== 特殊效果 ==================== */
+
+  /* 渐变背景 */
+  --gradient-primary: linear-gradient(135deg,
+      rgba(102, 126, 234, 0.2) 0%,
+      rgba(118, 75, 162, 0.2) 100%);
+
+  /* 发光效果 */
+  --glow-primary: 0 0 20px rgba(102, 126, 234, 0.3);
+  --glow-success: 0 0 20px rgba(16, 185, 129, 0.3);
+  --glow-warning: 0 0 20px rgba(245, 158, 11, 0.3);
+  --glow-error: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* ==================== 深色模式专用样式覆盖 ==================== */
+
+[data-theme="dark"] body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* 滚动条深色样式 */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* 选中文本样式 */
+[data-theme="dark"] ::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: #ffffff;
+}
+
+/* 链接样式 */
+[data-theme="dark"] a {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--primary-light);
+}
+
+/* 代码块样式 */
+[data-theme="dark"] code,
+[data-theme="dark"] pre {
+  background: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid var(--code-border);
+}
+
+/* ==================== 过渡动画 ==================== */
+
+/* 主题切换时的平滑过渡 */
+[data-theme] {
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 所有使用CSS变量的元素都有平滑过渡 */
+[data-theme] * {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* 禁用某些元素的过渡（避免性能问题） */
+[data-theme] *:has(> svg),
+[data-theme] svg,
+[data-theme] path {
+  transition: none;
+}
+
+/* ==================== Element Plus 组件覆盖 ==================== */
+
+/* 🔥 全局默认样式 - 不依赖 data-theme (深色为默认) */
+.el-select-dropdown,
+.el-select-dropdown.el-popper,
+.el-popper.is-light {
+  background-color: #1a1a2e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.el-select-dropdown__item {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+.el-select-dropdown__item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.el-picker-panel,
+.el-picker__popper,
+.el-date-picker {
+  background-color: #1a1a2e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.el-picker-panel__sidebar {
+  background-color: #1a1a2e !important;
+  border-right-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.el-picker-panel__shortcut,
+.el-date-picker__header-label,
+.el-picker-panel__icon-btn,
+.el-date-table td,
+.el-date-table th,
+.el-date-table-cell__text {
+  color: #ffffff !important;
+}
+
+.el-picker-panel__content,
+.el-picker-panel__body,
+.el-date-picker__header {
+  background-color: #1a1a2e !important;
+}
+
+/* 下拉菜单 - 增强优先级 */
+.el-select-dropdown.el-popper[data-theme="dark"],
+[data-theme="dark"] .el-select-dropdown.el-popper,
+[data-theme="dark"] .el-select-dropdown,
+.el-select-dropdown {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.el-select-dropdown__item[data-theme="dark"],
+[data-theme="dark"] .el-select-dropdown__item,
+.el-select-dropdown__item {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-select-dropdown__item:hover[data-theme="dark"],
+[data-theme="dark"] .el-select-dropdown__item:hover,
+.el-select-dropdown__item:hover {
+  background-color: var(--glass-bg-hover) !important;
+}
+
+.el-select-dropdown__item.is-selected[data-theme="dark"],
+[data-theme="dark"] .el-select-dropdown__item.is-selected,
+.el-select-dropdown__item.is-selected {
+  color: var(--primary-color) !important;
+}
+
+.el-select-dropdown__list[data-theme="dark"],
+[data-theme="dark"] .el-select-dropdown__list,
+.el-select-dropdown__list {
+  background-color: var(--bg-elevated) !important;
+}
+
+/* 日期选择器 - 增强优先级 */
+.el-picker-panel.el-popper[data-theme="dark"],
+[data-theme="dark"] .el-picker-panel.el-popper,
+[data-theme="dark"] .el-picker-panel,
+.el-picker-panel {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-picker__popper.el-popper[data-theme="dark"],
+[data-theme="dark"] .el-picker__popper.el-popper,
+[data-theme="dark"] .el-picker__popper,
+.el-picker__popper {
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-date-picker__header[data-theme="dark"],
+[data-theme="dark"] .el-date-picker__header,
+.el-date-picker__header {
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-date-picker__header-label[data-theme="dark"],
+[data-theme="dark"] .el-date-picker__header-label,
+.el-date-picker__header-label,
+.el-picker-panel__icon-btn[data-theme="dark"],
+[data-theme="dark"] .el-picker-panel__icon-btn,
+.el-picker-panel__icon-btn {
+  color: var(--text-primary) !important;
+}
+
+.el-date-table td[data-theme="dark"],
+[data-theme="dark"] .el-date-table td,
+.el-date-table td {
+  color: var(--text-primary) !important;
+}
+
+.el-date-table td.available:hover[data-theme="dark"],
+[data-theme="dark"] .el-date-table td.available:hover,
+.el-date-table td.available:hover {
+  color: var(--primary-color) !important;
+}
+
+.el-date-table td.current:not(.disabled)[data-theme="dark"],
+[data-theme="dark"] .el-date-table td.current:not(.disabled),
+.el-date-table td.current:not(.disabled) {
+  color: var(--primary-color) !important;
+}
+
+.el-date-table th[data-theme="dark"],
+[data-theme="dark"] .el-date-table th,
+.el-date-table th {
+  color: var(--text-secondary) !important;
+}
+
+.el-picker-panel__content[data-theme="dark"],
+[data-theme="dark"] .el-picker-panel__content,
+.el-picker-panel__content {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-date-table-cell__text[data-theme="dark"],
+[data-theme="dark"] .el-date-table-cell__text,
+.el-date-table-cell__text {
+  color: var(--text-primary) !important;
+}
+
+.el-date-range-picker__content[data-theme="dark"],
+[data-theme="dark"] .el-date-range-picker__content,
+.el-date-range-picker__content {
+  background-color: var(--bg-elevated) !important;
+}
+
+.el-picker-panel__sidebar[data-theme="dark"],
+[data-theme="dark"] .el-picker-panel__sidebar,
+.el-picker-panel__sidebar {
+  background-color: var(--bg-elevated) !important;
+  border-right: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-picker-panel__shortcut[data-theme="dark"],
+[data-theme="dark"] .el-picker-panel__shortcut,
+.el-picker-panel__shortcut {
+  color: var(--text-primary) !important;
+}
+
+.el-picker-panel__body[data-theme="dark"],
+[data-theme="dark"] .el-picker-panel__body,
+.el-picker-panel__body {
+  background-color: var(--bg-elevated) !important;
+}
+
+/* 输入框 */
+[data-theme="dark"] .el-input__inner {
+  color: var(--text-primary) !important;
+  background-color: rgb(255 255 255 / 0%) !important;
+}
+
+[data-theme="dark"] .el-textarea__inner {
+  color: var(--text-primary) !important;
+  background-color: rgb(255 255 255 / 0%) !important;
+}
+
+[data-theme="dark"] .el-input__wrapper {
+  background-color: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .el-input__wrapper input {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .el-select__wrapper {
+  background-color: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .el-select__wrapper input {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .el-select__placeholder {
+  color: var(--text-subtle) !important;
+}
+
+[data-theme="dark"] .el-select__selected-item {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .el-input__inner,
+[data-theme="dark"] .el-select__input {
+  color: var(--text-primary) !important;
+}
+
+/* ==================== 媒体查询优化 ==================== */
+
+/* 减少动画以节省电池（移动设备） */
+@media (prefers-reduced-motion: reduce) {
+  [data-theme] *,
+  [data-theme] {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  [data-theme="dark"] {
+    --text-primary: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.3);
+  }
+}

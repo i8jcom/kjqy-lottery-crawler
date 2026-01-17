@@ -1,0 +1,297 @@
+/**
+ * 科技风格主题 - CSS 变量定义
+ * Tech Theme CSS Variables
+ */
+
+:root {
+  /* ============================================
+     霓虹主色调 (Neon Primary Colors)
+     ============================================ */
+  --tech-cyan: #00ffff;           /* 青色霓虹 */
+  --tech-cyan-light: #6dffff;     /* 青色霓虹 - 浅 */
+  --tech-cyan-dark: #00cccc;      /* 青色霓虹 - 深 */
+
+  --tech-purple: #a855f7;         /* 紫色霓虹 */
+  --tech-purple-light: #c084fc;   /* 紫色霓虹 - 浅 */
+  --tech-purple-dark: #7c3aed;    /* 紫色霓虹 - 深 */
+
+  --tech-magenta: #ec4899;        /* 洋红霓虹 */
+  --tech-magenta-light: #f472b6;  /* 洋红霓虹 - 浅 */
+  --tech-magenta-dark: #db2777;   /* 洋红霓虹 - 深 */
+
+  --tech-blue: #3b82f6;           /* 蓝色霓虹 */
+  --tech-blue-light: #60a5fa;     /* 蓝色霓虹 - 浅 */
+  --tech-blue-dark: #2563eb;      /* 蓝色霓虹 - 深 */
+
+  --tech-green: #10b981;          /* 绿色霓虹 */
+  --tech-green-light: #34d399;    /* 绿色霓虹 - 浅 */
+  --tech-green-dark: #059669;     /* 绿色霓虹 - 深 */
+
+  --tech-orange: #f59e0b;         /* 橙色霓虹 */
+  --tech-orange-light: #fbbf24;   /* 橙色霓虹 - 浅 */
+  --tech-orange-dark: #d97706;    /* 橙色霓虹 - 深 */
+
+  --tech-red: #ef4444;            /* 红色霓虹 */
+  --tech-red-light: #f87171;      /* 红色霓虹 - 浅 */
+  --tech-red-dark: #dc2626;       /* 红色霓虹 - 深 */
+
+  /* ============================================
+     背景色 (Background Colors)
+     ============================================ */
+  --tech-bg-primary: #0a0e27;     /* 主背景 - 深蓝黑 */
+  --tech-bg-secondary: #1a1a2e;   /* 次背景 - 深蓝灰 */
+  --tech-bg-tertiary: #16213e;    /* 三级背景 */
+  --tech-bg-elevated: #222842;    /* 抬升背景 */
+  --tech-bg-overlay: rgba(26, 26, 46, 0.95); /* 覆盖层背景 */
+
+  /* ============================================
+     文本颜色 (Text Colors)
+     ============================================ */
+  --tech-text-primary: #ffffff;   /* 主文本 */
+  --tech-text-secondary: #e0e0e0; /* 次级文本 */
+  --tech-text-tertiary: #b0b0b0;  /* 三级文本 */
+  --tech-text-disabled: #808080;  /* 禁用文本 */
+  --tech-text-inverse: #0a0e27;   /* 反色文本 */
+
+  /* ============================================
+     边框颜色 (Border Colors)
+     ============================================ */
+  --tech-border-primary: rgba(0, 255, 255, 0.3);    /* 主边框 - 青色 */
+  --tech-border-secondary: rgba(168, 85, 247, 0.3); /* 次边框 - 紫色 */
+  --tech-border-subtle: rgba(255, 255, 255, 0.1);   /* 微妙边框 */
+  --tech-border-strong: rgba(255, 255, 255, 0.2);   /* 强调边框 */
+
+  /* ============================================
+     发光效果 (Glow Effects)
+     ============================================ */
+  --glow-cyan:
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 30px rgba(0, 255, 255, 0.1);
+
+  --glow-purple:
+    0 0 10px rgba(168, 85, 247, 0.5),
+    0 0 20px rgba(168, 85, 247, 0.3);
+
+  --glow-magenta:
+    0 0 10px rgba(236, 72, 153, 0.5),
+    0 0 20px rgba(236, 72, 153, 0.3);
+
+  --glow-blue:
+    0 0 10px rgba(59, 130, 246, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.3);
+
+  --glow-green:
+    0 0 10px rgba(16, 185, 129, 0.5),
+    0 0 20px rgba(16, 185, 129, 0.3);
+
+  --glow-orange:
+    0 0 10px rgba(245, 158, 11, 0.5),
+    0 0 20px rgba(245, 158, 11, 0.3);
+
+  --glow-red:
+    0 0 10px rgba(239, 68, 68, 0.5),
+    0 0 20px rgba(239, 68, 68, 0.3);
+
+  --glow-white:
+    0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.15);
+
+  /* ============================================
+     渐变效果 (Gradients)
+     ============================================ */
+  --gradient-cyber-primary: linear-gradient(
+    135deg,
+    var(--tech-cyan) 0%,
+    var(--tech-purple) 50%,
+    var(--tech-magenta) 100%
+  );
+
+  --gradient-cyber-secondary: linear-gradient(
+    135deg,
+    var(--tech-blue) 0%,
+    var(--tech-purple) 100%
+  );
+
+  --gradient-cyber-accent: linear-gradient(
+    90deg,
+    var(--tech-cyan) 0%,
+    var(--tech-magenta) 100%
+  );
+
+  --gradient-holographic: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.2) 0%,
+    rgba(168, 85, 247, 0.2) 50%,
+    rgba(236, 72, 153, 0.2) 100%
+  );
+
+  /* ============================================
+     阴影 (Shadows)
+     ============================================ */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.6);
+
+  /* 霓虹阴影 */
+  --shadow-neon-cyan:
+    0 0 20px rgba(0, 255, 255, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+
+  --shadow-neon-purple:
+    0 0 20px rgba(168, 85, 247, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+
+  /* ============================================
+     间距 (Spacing)
+     ============================================ */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* ============================================
+     圆角 (Border Radius)
+     ============================================ */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ============================================
+     过渡 (Transitions)
+     ============================================ */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* ============================================
+     玻璃态 (Glass Morphism)
+     ============================================ */
+  --glass-bg: rgba(26, 26, 46, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(10px);
+
+  /* ============================================
+     Z-Index 层级
+     ============================================ */
+  --z-background: -1;
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-modal: 1300;
+  --z-popover: 1400;
+  --z-tooltip: 1500;
+
+  /* ============================================
+     字体 (Typography)
+     ============================================ */
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-tech: 'Orbitron', 'Rajdhani', sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ============================================
+     响应式断点 (Breakpoints)
+     ============================================ */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1200px;
+  --breakpoint-desktop: 1440px;
+}
+
+/* ============================================
+   暗色主题（默认）
+   ============================================ */
+[data-theme="dark"],
+:root {
+  color-scheme: dark;
+}
+
+/* ============================================
+   亮色主题覆盖（如需要）
+   ============================================ */
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* 背景色调整 */
+  --tech-bg-primary: #f0f0f5;
+  --tech-bg-secondary: #ffffff;
+  --tech-bg-tertiary: #e8e8ed;
+
+  /* 文本颜色调整 */
+  --tech-text-primary: #1a1a2e;
+  --tech-text-secondary: #3d4451;
+  --tech-text-tertiary: #5a6270;
+
+  /* 边框调整 */
+  --tech-border-subtle: rgba(0, 0, 0, 0.1);
+  --tech-border-strong: rgba(0, 0, 0, 0.2);
+
+  /* 玻璃态调整 */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
+
+  /* 霓虹颜色调整 - 亮度模式下使用更柔和的颜色 */
+  --tech-cyan: #0891b2;           /* 柔和的深青色，替代刺眼的#00ffff */
+  --tech-cyan-light: #06b6d4;     /* 青色 - 浅 */
+  --tech-cyan-dark: #0e7490;      /* 青色 - 深 */
+
+  --tech-purple: #7c3aed;         /* 柔和的紫色 */
+  --tech-blue: #2563eb;           /* 柔和的蓝色 */
+}
+
+/* ============================================
+   全局科技风格基础样式
+   ============================================ */
+.tech-theme {
+  background: var(--tech-bg-primary);
+  color: var(--tech-text-primary);
+  font-family: var(--font-tech), system-ui, -apple-system, sans-serif;
+}
+
+/* 科技风格滚动条 */
+.tech-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.tech-scrollbar::-webkit-scrollbar-track {
+  background: var(--tech-bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.tech-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--gradient-cyber-primary);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--glow-cyan);
+}
+
+.tech-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-cyber-accent);
+}
+
+/* 选择文本样式 */
+.tech-theme ::selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: var(--tech-text-primary);
+}

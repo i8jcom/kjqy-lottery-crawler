@@ -1,0 +1,544 @@
+/**
+ * 霓虹效果样式库
+ * Neon Effects Stylesheet
+ */
+
+/* ============================================
+   霓虹文本效果 (Neon Text Effects)
+   ============================================ */
+
+.neon-text-cyan {
+  color: var(--tech-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+.neon-text-purple {
+  color: var(--tech-purple);
+  text-shadow: var(--glow-purple);
+}
+
+.neon-text-magenta {
+  color: var(--tech-magenta);
+  text-shadow: var(--glow-magenta);
+}
+
+.neon-text-blue {
+  color: var(--tech-blue);
+  text-shadow: var(--glow-blue);
+}
+
+.neon-text-green {
+  color: var(--tech-green);
+  text-shadow: var(--glow-green);
+}
+
+.neon-text-orange {
+  color: var(--tech-orange);
+  text-shadow: var(--glow-orange);
+}
+
+.neon-text-red {
+  color: var(--tech-red);
+  text-shadow: var(--glow-red);
+}
+
+/* ============================================
+   霓虹边框效果 (Neon Border Effects)
+   ============================================ */
+
+.neon-border {
+  border: 2px solid currentColor;
+  box-shadow:
+    inset 0 0 10px currentColor,
+    0 0 10px currentColor;
+}
+
+.neon-border-cyan {
+  border: 2px solid var(--tech-cyan);
+  box-shadow:
+    inset 0 0 10px var(--tech-cyan),
+    0 0 10px var(--tech-cyan),
+    0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.neon-border-purple {
+  border: 2px solid var(--tech-purple);
+  box-shadow:
+    inset 0 0 10px var(--tech-purple),
+    0 0 10px var(--tech-purple),
+    0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.neon-border-magenta {
+  border: 2px solid var(--tech-magenta);
+  box-shadow:
+    inset 0 0 10px var(--tech-magenta),
+    0 0 10px var(--tech-magenta),
+    0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+/* ============================================
+   渐变霓虹边框 (Gradient Neon Border)
+   ============================================ */
+
+.neon-border-gradient {
+  position: relative;
+  background: var(--tech-bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.neon-border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 2px;
+  background: var(--gradient-cyber-primary);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+}
+
+.neon-border-gradient-animated::before {
+  animation: border-rotate 3s linear infinite;
+}
+
+@keyframes border-rotate {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5)) hue-rotate(0deg);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5)) hue-rotate(360deg);
+  }
+}
+
+/* ============================================
+   霓虹背景效果 (Neon Background Effects)
+   ============================================ */
+
+.neon-bg-cyan {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: var(--glow-cyan);
+}
+
+.neon-bg-purple {
+  background: rgba(168, 85, 247, 0.1);
+  box-shadow: var(--glow-purple);
+}
+
+.neon-bg-gradient {
+  background: var(--gradient-holographic);
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+/* ============================================
+   脉冲发光效果 (Pulse Glow Effect)
+   ============================================ */
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 10px currentColor,
+      0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 20px currentColor,
+      0 0 40px rgba(0, 255, 255, 0.6),
+      0 0 60px rgba(0, 255, 255, 0.3);
+  }
+}
+
+.pulse-glow-cyan {
+  animation: pulse-glow-cyan 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-cyan {
+  0%, 100% {
+    box-shadow:
+      0 0 10px var(--tech-cyan),
+      0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 20px var(--tech-cyan),
+      0 0 40px rgba(0, 255, 255, 0.6),
+      0 0 60px rgba(0, 255, 255, 0.3);
+  }
+}
+
+.pulse-glow-purple {
+  animation: pulse-glow-purple 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-purple {
+  0%, 100% {
+    box-shadow:
+      0 0 10px var(--tech-purple),
+      0 0 20px rgba(168, 85, 247, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 20px var(--tech-purple),
+      0 0 40px rgba(168, 85, 247, 0.6),
+      0 0 60px rgba(168, 85, 247, 0.3);
+  }
+}
+
+/* ============================================
+   霓虹下划线效果 (Neon Underline)
+   ============================================ */
+
+.neon-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.neon-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-cyber-accent);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.neon-underline-animated::after {
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.neon-underline-animated:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   扫描线效果 (Scanline Effect)
+   ============================================ */
+
+.scanline-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--tech-cyan) 50%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px var(--tech-cyan);
+  animation: scanline-move 2s linear infinite;
+  pointer-events: none;
+  z-index: var(--z-popover);
+}
+
+@keyframes scanline-move {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   全息效果 (Holographic Effect)
+   ============================================ */
+
+.holographic {
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.holographic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-holographic);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.holographic-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.holographic-shine:hover::after {
+  transform: translateX(100%);
+}
+
+/* ============================================
+   数据流效果 (Data Stream Effect)
+   ============================================ */
+
+.data-stream {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stream::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: data-stream-flow 2s ease-in-out infinite;
+}
+
+@keyframes data-stream-flow {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ============================================
+   故障效果 (Glitch Effect)
+   ============================================ */
+
+.glitch {
+  position: relative;
+  color: var(--tech-cyan);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--tech-magenta);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--tech-cyan);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(120px, 9999px, 80px, 0);
+  }
+  10% {
+    clip: rect(90px, 9999px, 140px, 0);
+  }
+  20% {
+    clip: rect(60px, 9999px, 120px, 0);
+  }
+  30% {
+    clip: rect(140px, 9999px, 60px, 0);
+  }
+  40% {
+    clip: rect(20px, 9999px, 100px, 0);
+  }
+  50% {
+    clip: rect(100px, 9999px, 40px, 0);
+  }
+  60% {
+    clip: rect(40px, 9999px, 130px, 0);
+  }
+  70% {
+    clip: rect(130px, 9999px, 20px, 0);
+  }
+  80% {
+    clip: rect(80px, 9999px, 90px, 0);
+  }
+  90% {
+    clip: rect(50px, 9999px, 110px, 0);
+  }
+  100% {
+    clip: rect(110px, 9999px, 50px, 0);
+  }
+}
+
+/* ============================================
+   CRT 屏幕效果 (CRT Screen Effect)
+   ============================================ */
+
+.crt-screen {
+  position: relative;
+  background: var(--tech-bg-primary);
+}
+
+.crt-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: var(--z-popover);
+}
+
+.crt-screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none;
+  z-index: var(--z-popover);
+}
+
+/* ============================================
+   能量条效果 (Energy Bar Effect)
+   ============================================ */
+
+.energy-bar {
+  position: relative;
+  height: 8px;
+  background: var(--tech-bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.energy-bar-fill {
+  height: 100%;
+  background: var(--gradient-cyber-accent);
+  border-radius: var(--radius-full);
+  box-shadow: var(--glow-cyan);
+  transition: width 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: energy-flow 1.5s linear infinite;
+}
+
+@keyframes energy-flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ============================================
+   工具类 (Utility Classes)
+   ============================================ */
+
+/* 霓虹 hover 效果 */
+.neon-hover {
+  transition: all var(--transition-base);
+}
+
+.neon-hover:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+/* 霓虹激活状态 */
+.neon-active {
+  box-shadow: var(--glow-cyan);
+  border-color: var(--tech-cyan);
+}
+
+/* 禁用减速器动画（针对动画敏感用户） */
+@media (prefers-reduced-motion: reduce) {
+  .pulse-glow,
+  .pulse-glow-cyan,
+  .pulse-glow-purple,
+  .scanline,
+  .data-stream::before,
+  .energy-bar-fill::after,
+  .neon-border-gradient-animated::before,
+  .glitch::before,
+  .glitch::after {
+    animation: none;
+  }
+
+  .neon-hover,
+  .holographic-shine::after {
+    transition: none;
+  }
+}

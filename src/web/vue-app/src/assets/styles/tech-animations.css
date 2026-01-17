@@ -1,0 +1,729 @@
+/**
+ * 科技风格动画库
+ * Tech Theme Animations Library
+ */
+
+/* ============================================
+   淡入动画 (Fade Animations)
+   ============================================ */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.3s ease-in;
+}
+
+.fade-out {
+  animation: fade-out 0.3s ease-out;
+}
+
+/* ============================================
+   滑入动画 (Slide Animations)
+   ============================================ */
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-up {
+  animation: slide-in-up 0.4s ease-out;
+}
+
+.slide-in-down {
+  animation: slide-in-down 0.4s ease-out;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.4s ease-out;
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.4s ease-out;
+}
+
+/* ============================================
+   缩放动画 (Scale Animations)
+   ============================================ */
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.scale-in {
+  animation: scale-in 0.3s ease-out;
+}
+
+.scale-out {
+  animation: scale-out 0.3s ease-in;
+}
+
+.scale-pulse {
+  animation: scale-pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   旋转动画 (Rotate Animations)
+   ============================================ */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.rotate {
+  animation: rotate 1s linear infinite;
+}
+
+.rotate-slow {
+  animation: rotate 3s linear infinite;
+}
+
+.rotate-reverse {
+  animation: rotate-reverse 1s linear infinite;
+}
+
+/* ============================================
+   弹跳动画 (Bounce Animations)
+   ============================================ */
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.bounce-in {
+  animation: bounce-in 0.6s ease-out;
+}
+
+/* ============================================
+   摇晃动画 (Shake Animation)
+   ============================================ */
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* ============================================
+   加载动画 (Loading Animations)
+   ============================================ */
+
+/* 旋转加载器 */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--tech-border-subtle);
+  border-top-color: var(--tech-cyan);
+  border-radius: 50%;
+  animation: rotate 0.8s linear infinite;
+  box-shadow: var(--glow-cyan);
+}
+
+/* 点状加载器 */
+.loading-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  background: var(--tech-cyan);
+  border-radius: 50%;
+  box-shadow: var(--glow-cyan);
+  animation: loading-dots-bounce 1.4s ease-in-out infinite both;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes loading-dots-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 进度条加载器 */
+.loading-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--tech-bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background: var(--gradient-cyber-accent);
+  box-shadow: var(--glow-cyan);
+  animation: loading-bar-move 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-bar-move {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* 骨架屏加载 */
+.skeleton-loading {
+  background: linear-gradient(
+    90deg,
+    var(--tech-bg-secondary) 0%,
+    var(--tech-bg-tertiary) 50%,
+    var(--tech-bg-secondary) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ============================================
+   粒子效果动画 (Particle Animations)
+   ============================================ */
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--tech-cyan);
+  box-shadow: 0 0 4px var(--tech-cyan);
+  animation: particle-float 10s linear infinite;
+}
+
+/* ============================================
+   数字滚动动画 (Number Counter Animation)
+   ============================================ */
+
+@keyframes number-roll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.number-counter {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.number-counter-rolling {
+  animation: number-roll 0.5s ease-out;
+}
+
+/* ============================================
+   打字机效果 (Typewriter Effect)
+   ============================================ */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--tech-cyan);
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--tech-cyan);
+  white-space: nowrap;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+/* ============================================
+   霓虹流动效果 (Neon Flow)
+   ============================================ */
+
+@keyframes neon-flow {
+  0% {
+    box-shadow:
+      0 0 5px var(--tech-cyan),
+      0 0 10px var(--tech-cyan);
+  }
+  50% {
+    box-shadow:
+      0 0 10px var(--tech-cyan),
+      0 0 20px var(--tech-cyan),
+      0 0 30px var(--tech-cyan);
+  }
+  100% {
+    box-shadow:
+      0 0 5px var(--tech-cyan),
+      0 0 10px var(--tech-cyan);
+  }
+}
+
+.neon-flow {
+  animation: neon-flow 2s ease-in-out infinite;
+}
+
+/* ============================================
+   数据流动 (Data Flow)
+   ============================================ */
+
+@keyframes data-flow-vertical {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes data-flow-horizontal {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.data-flow-vertical {
+  animation: data-flow-vertical 2s linear infinite;
+}
+
+.data-flow-horizontal {
+  animation: data-flow-horizontal 2s linear infinite;
+}
+
+/* ============================================
+   网格背景动画 (Grid Background Animation)
+   ============================================ */
+
+@keyframes grid-pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.grid-background {
+  background-image:
+    linear-gradient(var(--tech-border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tech-border-subtle) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-pulse 3s ease-in-out infinite;
+}
+
+/* ============================================
+   雷达扫描效果 (Radar Scan)
+   ============================================ */
+
+@keyframes radar-scan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-scan {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.radar-scan::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--tech-cyan) 100%
+  );
+  transform-origin: left center;
+  animation: radar-scan 3s linear infinite;
+  box-shadow: 0 0 10px var(--tech-cyan);
+}
+
+/* ============================================
+   涟漪效果 (Ripple Effect)
+   ============================================ */
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 255, 0.4) 0%,
+    rgba(0, 255, 255, 0) 70%
+  );
+  animation: ripple 0.6s ease-out;
+  pointer-events: none;
+}
+
+/* ============================================
+   页面过渡动画 (Page Transitions)
+   ============================================ */
+
+/* Vue Router transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* 淡入淡出过渡 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 缩放过渡 */
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.3s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* ============================================
+   交互反馈动画 (Interactive Feedback)
+   ============================================ */
+
+/* 点击波纹 */
+@keyframes click-ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.click-ripple {
+  animation: click-ripple 0.6s ease-out;
+}
+
+/* Hover 发光 */
+.hover-glow {
+  transition: all var(--transition-base);
+}
+
+.hover-glow:hover {
+  filter: brightness(1.2) drop-shadow(0 0 10px currentColor);
+  transform: translateY(-2px);
+}
+
+/* 按钮按下效果 */
+.button-press:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+/* ============================================
+   延迟工具类 (Delay Utilities)
+   ============================================ */
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* ============================================
+   时长工具类 (Duration Utilities)
+   ============================================ */
+
+.duration-fast {
+  animation-duration: 0.15s;
+}
+
+.duration-normal {
+  animation-duration: 0.3s;
+}
+
+.duration-slow {
+  animation-duration: 0.5s;
+}
+
+/* ============================================
+   无障碍：禁用动画 (Accessibility)
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .loading-spinner,
+  .loading-dots span,
+  .loading-bar::after,
+  .skeleton-loading,
+  .particle,
+  .neon-flow,
+  .radar-scan::after,
+  .grid-background {
+    animation: none !important;
+  }
+}

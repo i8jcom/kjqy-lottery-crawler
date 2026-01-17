@@ -1,0 +1,197 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-01-17T01:30:47.940Z",
+  "note": "域名变更时可修改url字段，修改后重启服务生效",
+  "sources": [
+    {
+      "id": "speedylot88",
+      "name": "SpeedyLot88官网",
+      "url": "https://speedylot88.com",
+      "description": "极速彩官方数据源，开奖前15秒即可获取数据",
+      "priority": 1,
+      "updateInterval": 15,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 6896,
+        "successRequests": 6789,
+        "failedRequests": 107,
+        "avgResponseTime": 104,
+        "lastCheck": "2026-01-17T01:30:46.186Z",
+        "lastSuccess": "2026-01-17T01:30:46.300Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "cwl",
+      "name": "中国福彩官网",
+      "url": "https://3650062.com/api/",
+      "description": "中国福彩免费API数据源（完全免费、无限制调用、支持智能自动补全、动态域名管理）",
+      "priority": 1,
+      "updateInterval": 60,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 207984,
+        "successRequests": 207549,
+        "failedRequests": 435,
+        "avgResponseTime": 131,
+        "lastCheck": "2026-01-17T01:30:46.300Z",
+        "lastSuccess": "2026-01-17T01:30:46.712Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "sportslottery",
+      "name": "中国体彩官网",
+      "url": "https://webapi.sporttery.cn",
+      "description": "中国体育彩票官方API数据源（超级大乐透、排列3、排列5、七星彩）",
+      "priority": 1,
+      "updateInterval": 60,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 4527,
+        "successRequests": 4527,
+        "failedRequests": 0,
+        "avgResponseTime": 12,
+        "lastCheck": "2026-01-17T01:30:46.712Z",
+        "lastSuccess": "2026-01-17T01:30:46.839Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "sglotteries",
+      "name": "SG Lotteries",
+      "url": "https://sglotteries.com",
+      "description": "SG彩官方数据源，支持6种SG彩种",
+      "priority": 1,
+      "updateInterval": 15,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 6709,
+        "successRequests": 6587,
+        "failedRequests": 122,
+        "avgResponseTime": 90,
+        "lastCheck": "2026-01-17T01:30:46.840Z",
+        "lastSuccess": "2026-01-17T01:30:46.938Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "auluckylotteries",
+      "name": "AU Lucky Lotteries",
+      "url": "https://auluckylotteries.com",
+      "description": "AU Lucky Lotteries官方数据源，支持4种Lucky Ball彩种",
+      "priority": 1,
+      "updateInterval": 15,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 6546,
+        "successRequests": 6128,
+        "failedRequests": 418,
+        "avgResponseTime": 105,
+        "lastCheck": "2026-01-17T01:30:46.938Z",
+        "lastSuccess": "2026-01-17T01:30:47.071Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "luckysscai",
+      "name": "LuckySscai官网",
+      "url": "https://luckysscai.com",
+      "description": "LuckySscai官方数据源，幸运时时彩",
+      "priority": 1,
+      "updateInterval": 15,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 6193,
+        "successRequests": 6051,
+        "failedRequests": 142,
+        "avgResponseTime": 99,
+        "lastCheck": "2026-01-17T01:30:47.071Z",
+        "lastSuccess": "2026-01-17T01:30:47.185Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "luckylottoz",
+      "name": "LuckyLottoz官网",
+      "url": "https://luckylottoz.com",
+      "description": "LuckyLottoz官方数据源，幸运飞艇（马耳他彩票，每5分钟一期）",
+      "priority": 1,
+      "updateInterval": 15,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 5891,
+        "successRequests": 5790,
+        "failedRequests": 101,
+        "avgResponseTime": 346,
+        "lastCheck": "2026-01-17T01:30:47.185Z",
+        "lastSuccess": "2026-01-17T01:30:47.554Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "hkjc",
+      "name": "On.cc 东网 (香港六合彩)",
+      "url": "https://win.on.cc",
+      "description": "On.cc 东网提供香港六合彩官方数据（每周二、四、六晚9:30开奖）",
+      "priority": 1,
+      "updateInterval": 300,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 5711,
+        "successRequests": 5710,
+        "failedRequests": 1,
+        "avgResponseTime": 101,
+        "lastCheck": "2026-01-17T01:30:47.554Z",
+        "lastSuccess": "2026-01-17T01:30:47.666Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "uklottos",
+      "name": "UK Lottos官网",
+      "url": "https://www.uklottos.com",
+      "description": "UK Lottos官方数据源（UK Lotto 5/8/10/20，每2.5分钟一期）",
+      "priority": 1,
+      "updateInterval": 15,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 4521,
+        "successRequests": 4422,
+        "failedRequests": 99,
+        "avgResponseTime": 88,
+        "lastCheck": "2026-01-17T01:30:47.666Z",
+        "lastSuccess": "2026-01-17T01:30:47.770Z",
+        "lastError": null
+      }
+    },
+    {
+      "id": "taiwanlottery",
+      "name": "台湾彩票官网",
+      "url": "https://www.taiwanlottery.com",
+      "description": "🇹🇼 台湾彩票官方数据源（威力彩、大乐透、今彩539、38樂合彩、3D、4D）",
+      "priority": 1,
+      "updateInterval": 3600,
+      "enabled": true,
+      "status": "healthy",
+      "stats": {
+        "totalRequests": 3267,
+        "successRequests": 3204,
+        "failedRequests": 63,
+        "avgResponseTime": 125,
+        "lastCheck": "2026-01-17T01:30:47.771Z",
+        "lastSuccess": "2026-01-17T01:30:47.940Z",
+        "lastError": null
+      }
+    }
+  ]
+}

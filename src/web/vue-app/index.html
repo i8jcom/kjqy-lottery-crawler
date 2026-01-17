@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 禁止缓存HTML文件，确保始终加载最新版本 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>爬虫管理系统</title>
+    <style>
+      /* 🔥 在 Element Plus 加载前设置 CSS 变量 - 深色主题 */
+      :root {
+        --el-text-color-primary: #ffffff !important;
+        --el-text-color-regular: #e0e0e0 !important;
+        --el-text-color-secondary: #b0b0b0 !important;
+        --el-text-color-placeholder: #808080 !important;
+        --el-bg-color: #1a1a2e !important;
+        --el-bg-color-page: #0a0e27 !important;
+        --el-bg-color-overlay: #1a1a2e !important;
+        --el-border-color: rgba(255, 255, 255, 0.1) !important;
+        --el-border-color-light: rgba(255, 255, 255, 0.08) !important;
+        --el-fill-color: rgba(255, 255, 255, 0.05) !important;
+        --el-fill-color-light: rgba(255, 255, 255, 0.03) !important;
+        --el-fill-color-blank: #1a1a2e !important;
+      }
+
+      /* 亮色主题覆盖 */
+      html[data-theme="light"] {
+        --el-text-color-primary: #3d4451 !important;
+        --el-text-color-regular: #5a6270 !important;
+        --el-text-color-secondary: #707886 !important;
+        --el-text-color-placeholder: #8b92a0 !important;
+        --el-bg-color: #d5d7e0 !important;
+        --el-bg-color-page: #c8cad3 !important;
+        --el-bg-color-overlay: #d5d7e0 !important;
+        --el-border-color: rgba(0, 0, 0, 0.1) !important;
+        --el-border-color-light: rgba(0, 0, 0, 0.08) !important;
+        --el-fill-color: #cecfd9 !important;
+        --el-fill-color-light: #d5d7e0 !important;
+        --el-fill-color-blank: #d5d7e0 !important;
+      }
+    </style>
+    <style>
+      /* 加载提示样式 */
+      #app-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        z-index: 9999;
+      }
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(102, 126, 234, 0.2);
+        border-top-color: #667eea;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin-bottom: 20px;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      .loading-text {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .error-message {
+        color: #ef4444;
+        margin-top: 20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 加载提示 -->
+      <div id="app-loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">正在加载爬虫管理系统...</div>
+        <div class="error-message" id="error-msg">
+          如果长时间停留在此页面，请检查浏览器控制台（F12）
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      // 5秒后如果Vue还没挂载，显示错误提示
+      setTimeout(() => {
+        const loading = document.getElementById('app-loading');
+        if (loading && loading.parentElement) {
+          document.getElementById('error-msg').style.display = 'block';
+          console.error('Vue应用加载超时！请检查：');
+          console.error('1. 浏览器是否支持ES模块（需要现代浏览器）');
+          console.error('2. 浏览器扩展是否阻止了JavaScript');
+          console.error('3. 检查Network标签查看资源加载情况');
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>

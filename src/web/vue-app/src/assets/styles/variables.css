@@ -1,0 +1,55 @@
+/**
+ * 设计令牌系统
+ * 复用主系统的Glass Morphism设计风格
+ */
+
+:root {
+  /* 主色调 */
+  --primary-color: #667eea;
+  --primary-dark: #764ba2;
+
+  /* 功能色 */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #3b82f6;
+
+  /* Element Plus 颜色变量 */
+  --el-color-success: #67c23a;
+  --el-color-warning: #e6a23c;
+  --el-color-danger: #f56c6c;
+  --el-color-info: #909399;
+
+  /* 背景色 */
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+
+  /* 文本色 */
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+
+  /* 阴影系统 (4级) */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+  --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
+
+  /* 圆角系统 */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* 过渡时间 (缓动函数) */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* 彩种标签颜色 */
+  --tag-speedylot: #8b5cf6;  /* 紫色 - 极速彩 */
+  --tag-singapore: #ec4899;  /* 粉色 - 新加坡彩 */
+  --tag-australia: #06b6d4;  /* 青色 - 澳洲彩 */
+  --tag-uklotto: #f97316;    /* 橙色 - 英国彩 */
+  --tag-high-freq: #10b981;  /* 绿色 - 高频彩 */
+  --tag-low-freq: #6366f1;   /* 蓝色 - 低频彩 */
+}

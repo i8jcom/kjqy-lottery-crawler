@@ -1,0 +1,463 @@
+import axios from 'axios';
+import logger from '../utils/Logger.js';
+import fs from 'fs';
+import path from 'path';
+
+/**
+ * 数据源管理器 - 动态管理多个API数据源
+ */
+class DataSourceManager {
+  constructor() {
+    this.sources = [];
+    this.configFile = path.join(process.cwd(), 'data', 'api-sources.json');
+    this.healthCheckInterval = 60000; // 1分钟检查一次
+    this.healthCheckTimer = null;
+    this.loadSources();
+  }
+
+  /**
+   * 加载数据源配置
+   */
+  loadSources() {
+    try {
+      // 确保data目录存在
+      const dataDir = path.dirname(this.configFile);
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+      }
+
+      // 如果配置文件不存在，创建默认配置
+      if (!fs.existsSync(this.configFile)) {
+        const defaultSources = {
+          sources: [
+            {
+              id: 'api_official',
+              name: '官方API',
+              baseUrl: 'https://api.apiose122.com',
+              type: 'official',
+              priority: 1,
+              enabled: true,
+              needsProxy: true,
+              status: 'unknown',
+              responseTime: 0,
+              successRate: '0.00',
+              lastCheck: null,
+              errors: 0,
+              totalRequests: 0,
+              successRequests: 0,
+              endpointHealth: {}
+            },
+            {
+              id: 'api_3650062',
+              name: '3650062备用',
+              baseUrl: 'https://3650062.com/api',
+              type: 'backup',
+              priority: 2,
+              enabled: true,
+              needsProxy: false,
+              status: 'unknown',
+              responseTime: 0,
+              successRate: '0.00',
+              lastCheck: null,
+              errors: 0,
+              totalRequests: 0,
+              successRequests: 0,
+              endpointHealth: {}
+            },
+            {
+              id: 'api_168official',
+              name: '168官方API',
+              baseUrl: 'https://stg-168-api.api861.com',
+              type: 'backup',
+              priority: 3,
+              enabled: false,
+              needsProxy: false,
+              status: 'unknown',
+              responseTime: 0,
+              successRate: '0.00',
+              lastCheck: null,
+              errors: 0,
+              totalRequests: 0,
+              successRequests: 0,
+              endpointHealth: {}
+            }
+          ]
+        };
+
+        fs.writeFileSync(this.configFile, JSON.stringify(defaultSources, null, 2));
+        this.sources = defaultSources.sources;
+      } else {
+        const data = JSON.parse(fs.readFileSync(this.configFile, 'utf8'));
+        this.sources = data.sources || [];
+      }
+
+      logger.info(`✅ 加载了 ${this.sources.length} 个数据源配置`);
+    } catch (error) {
+      logger.error('加载数据源配置失败:', error);
+      this.sources = [];
+    }
+  }
+
+  /**
+   * 保存数据源配置
+   */
+  saveSources() {
+    try {
+      fs.writeFileSync(this.configFile, JSON.stringify({ sources: this.sources }, null, 2));
+      logger.info('✅ 数据源配置已保存');
+      return true;
+    } catch (error) {
+      logger.error('保存数据源配置失败:', error);
+      return false;
+    }
+  }
+
+  /**
+   * 添加新数据源
+   */
+  addSource(sourceConfig) {
+    const newSource = {
+      id: sourceConfig.id || `api_${Date.now()}`,
+      name: sourceConfig.name,
+      baseUrl: sourceConfig.baseUrl,
+      type: sourceConfig.type || 'custom',
+      priority: sourceConfig.priority || 99,
+      enabled: sourceConfig.enabled !== false,
+      needsProxy: sourceConfig.needsProxy || false,
+      status: 'unknown',
+      responseTime: 0,
+      successRate: '0.00',
+      lastCheck: null,
+      errors: 0,
+      totalRequests: 0,
+      successRequests: 0,
+      endpointHealth: {}
+    };
+
+    this.sources.push(newSource);
+    this.saveSources();
+
+    logger.info(`✅ 添加新数据源: ${newSource.name}`);
+    return newSource;
+  }
+
+  /**
+   * 删除数据源
+   */
+  removeSource(sourceId) {
+    const index = this.sources.findIndex(s => s.id === sourceId);
+    if (index !== -1) {
+      const removed = this.sources.splice(index, 1)[0];
+      this.saveSources();
+      logger.info(`✅ 删除数据源: ${removed.name}`);
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * 更新数据源配置
+   */
+  updateSource(sourceId, updates) {
+    const source = this.sources.find(s => s.id === sourceId);
+    if (source) {
+      Object.assign(source, updates);
+      this.saveSources();
+      logger.info(`✅ 更新数据源: ${source.name}`);
+      return source;
+    }
+    return null;
+  }
+
+  /**
+   * 启用/禁用数据源
+   */
+  toggleSource(sourceId, enabled) {
+    const source = this.sources.find(s => s.id === sourceId);
+    if (source) {
+      source.enabled = enabled;
+      this.saveSources();
+      logger.info(`${enabled ? '✅ 启用' : '⏸️ 禁用'}数据源: ${source.name}`);
+      return source;
+    }
+    return null;
+  }
+
+  /**
+   * 获取所有数据源
+   */
+  getSources() {
+    return this.sources;
+  }
+
+  /**
+   * 获取可用的数据源（按优先级排序）
+   */
+  getAvailableSources() {
+    return this.sources
+      .filter(s => s.enabled && s.status !== 'error')
+      .sort((a, b) => a.priority - b.priority);
+  }
+
+  /**
+   * 获取最佳数据源
+   */
+  getBestSource() {
+    const available = this.getAvailableSources();
+
+    // 优先选择状态为healthy的
+    const healthy = available.find(s => s.status === 'healthy');
+    if (healthy) return healthy;
+
+    // 如果没有healthy的，选择第一个启用的
+    return available[0] || null;
+  }
+
+  /**
+   * 健康检查 - 单个数据源
+   */
+  async checkSourceHealth(source) {
+    const startTime = Date.now();
+
+    try {
+      // 测试一个简单的端点
+      const testEndpoint = this.getTestEndpoint(source);
+      const url = `${source.baseUrl}${testEndpoint}`;
+
+      const response = await axios.get(url, {
+        timeout: 10000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+          'Accept': 'application/json'
+        }
+      });
+
+      const responseTime = Date.now() - startTime;
+
+      // 检查响应
+      if (response.status === 200) {
+        // 检查响应数据格式
+        const isValidData = this.validateResponseData(response.data);
+
+        if (isValidData) {
+          // 更新统计
+          source.totalRequests++;
+          source.successRequests++;
+          source.responseTime = responseTime;
+          source.status = 'healthy';
+          source.lastCheck = new Date().toISOString();
+          source.successRate = ((source.successRequests / source.totalRequests) * 100).toFixed(2);
+
+          logger.success(`✅ [${source.name}] 健康检查通过 - ${responseTime}ms`);
+          return true;
+        } else {
+          // 数据格式错误
+          source.totalRequests++;
+          source.errors++;
+          source.status = 'warning';
+          source.lastCheck = new Date().toISOString();
+          source.successRate = ((source.successRequests / source.totalRequests) * 100).toFixed(2);
+
+          logger.warn(`⚠️ [${source.name}] 数据格式错误`);
+          return false;
+        }
+      } else {
+        // HTTP错误
+        source.totalRequests++;
+        source.errors++;
+        source.status = 'error';
+        source.lastCheck = new Date().toISOString();
+        source.successRate = ((source.successRequests / source.totalRequests) * 100).toFixed(2);
+
+        logger.error(`❌ [${source.name}] HTTP ${response.status}`);
+        return false;
+      }
+    } catch (error) {
+      source.totalRequests++;
+      source.errors++;
+      source.status = 'error';
+      source.lastCheck = new Date().toISOString();
+      source.successRate = ((source.successRequests / source.totalRequests) * 100).toFixed(2);
+
+      logger.error(`❌ [${source.name}] 健康检查失败:`, error.message);
+      return false;
+    }
+  }
+
+  /**
+   * 获取测试端点
+   */
+  getTestEndpoint(source) {
+    // 根据baseUrl判断使用哪个测试端点
+    if (source.baseUrl.includes('api.apiose122.com')) {
+      return '/pks/getLotteryPksInfo.do?lotCode=10037';
+    } else if (source.baseUrl.includes('3650062.com')) {
+      return '/pks/getLotteryPksInfo.do?lotCode=10037';
+    } else if (source.baseUrl.includes('stg-168-api')) {
+      return '/pks/getLotteryInfo.do?lotCode=10037';
+    } else {
+      return '/pks/getLotteryPksInfo.do?lotCode=10037';
+    }
+  }
+
+  /**
+   * 验证响应数据
+   */
+  validateResponseData(data) {
+    // 检查基本结构
+    if (!data) return false;
+
+    // API返回errorCode=0表示成功
+    if (data.errorCode === 0 && data.result && data.result.data) {
+      const resultData = data.result.data;
+
+      // 检查必要字段
+      if (resultData.serverTime && resultData.drawTime) {
+        // 检查数据是否过期
+        const isExpired = this.checkDataExpired(resultData);
+        return !isExpired;
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * 检查数据是否过期
+   */
+  checkDataExpired(data) {
+    try {
+      if (!data.serverTime || !data.drawTime) {
+        return true;
+      }
+
+      const serverTimestamp = new Date(data.serverTime).getTime();
+      const drawTimestamp = new Date(data.drawTime).getTime();
+
+      // 如果服务器时间超过开奖时间超过10分钟，认为数据过期
+      const diffMinutes = (serverTimestamp - drawTimestamp) / 1000 / 60;
+
+      return diffMinutes > 10;
+    } catch (error) {
+      return true;
+    }
+  }
+
+  /**
+   * 健康检查 - 所有数据源
+   */
+  async checkAllSourcesHealth() {
+    logger.info('🏥 开始健康检查所有数据源...');
+
+    const results = [];
+    for (const source of this.sources) {
+      if (source.enabled) {
+        const result = await this.checkSourceHealth(source);
+        results.push({
+          sourceId: source.id,
+          name: source.name,
+          success: result,
+          status: source.status
+        });
+      }
+    }
+
+    // 保存更新后的状态
+    this.saveSources();
+
+    logger.info('✅ 健康检查完成');
+    return results;
+  }
+
+  /**
+   * 启动自动健康检查
+   */
+  startHealthCheck() {
+    if (this.healthCheckTimer) {
+      clearInterval(this.healthCheckTimer);
+    }
+
+    // 立即执行一次
+    this.checkAllSourcesHealth();
+
+    // 定期检查
+    this.healthCheckTimer = setInterval(() => {
+      this.checkAllSourcesHealth();
+    }, this.healthCheckInterval);
+
+    logger.info(`⏰ 自动健康检查已启动（间隔: ${this.healthCheckInterval / 1000}秒）`);
+  }
+
+  /**
+   * 停止自动健康检查
+   */
+  stopHealthCheck() {
+    if (this.healthCheckTimer) {
+      clearInterval(this.healthCheckTimer);
+      this.healthCheckTimer = null;
+      logger.info('⏸️ 自动健康检查已停止');
+    }
+  }
+
+  /**
+   * 记录端点请求结果
+   */
+  recordEndpointResult(sourceId, endpoint, success, responseTime, error = null) {
+    const source = this.sources.find(s => s.id === sourceId);
+    if (!source) return;
+
+    // 初始化端点统计
+    if (!source.endpointHealth[endpoint]) {
+      source.endpointHealth[endpoint] = {
+        success: 0,
+        total: 0,
+        avgTime: 0,
+        lastError: null
+      };
+    }
+
+    const stats = source.endpointHealth[endpoint];
+    stats.total++;
+
+    if (success) {
+      stats.success++;
+      // 更新平均响应时间
+      stats.avgTime = Math.floor((stats.avgTime * (stats.success - 1) + responseTime) / stats.success);
+    } else {
+      stats.lastError = error || 'Unknown error';
+    }
+
+    this.saveSources();
+  }
+
+  /**
+   * 获取数据源统计信息
+   */
+  getSourceStats(sourceId) {
+    const source = this.sources.find(s => s.id === sourceId);
+    if (!source) return null;
+
+    return {
+      id: source.id,
+      name: source.name,
+      status: source.status,
+      enabled: source.enabled,
+      responseTime: source.responseTime,
+      successRate: source.successRate,
+      totalRequests: source.totalRequests,
+      successRequests: source.successRequests,
+      errors: source.errors,
+      lastCheck: source.lastCheck,
+      endpointHealth: source.endpointHealth
+    };
+  }
+
+  /**
+   * 获取所有数据源统计
+   */
+  getAllStats() {
+    return this.sources.map(source => this.getSourceStats(source.id));
+  }
+}
+
+export default new DataSourceManager();

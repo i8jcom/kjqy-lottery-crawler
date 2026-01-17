@@ -1,0 +1,23 @@
+#!/bin/bash
+echo "===== crawler-service 完整目录结构扫描 ====="
+echo ""
+echo "1. 查找所有src目录:"
+find . -type d -name "src" 2>/dev/null | grep -v node_modules | grep -v ".git"
+echo ""
+echo "2. 查找所有web目录:"
+find . -type d -name "web" 2>/dev/null | grep -v node_modules | grep -v ".git"
+echo ""
+echo "3. 查找所有vue-app目录:"
+find . -type d -name "vue-app" 2>/dev/null | grep -v node_modules | grep -v ".git"
+echo ""
+echo "4. 查找所有crawler-service目录:"
+find . -type d -name "crawler-service" 2>/dev/null | grep -v node_modules | grep -v ".git"
+echo ""
+echo "5. 查找所有-old, -backup目录:"
+find . -type d \( -name "*-old" -o -name "*-backup" -o -name "*_old" -o -name "*_backup" \) 2>/dev/null | grep -v node_modules | grep -v ".git"
+echo ""
+echo "6. 检查异常深度嵌套 (超过8层):"
+find . -type d 2>/dev/null | grep -v node_modules | grep -v ".git" | awk -F/ 'NF > 10' | head -20
+echo ""
+echo "7. 主要目录大小:"
+du -sh src/ config/ data/ docs/ scripts/ tests/ 2>/dev/null
