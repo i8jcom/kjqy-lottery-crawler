@@ -25,3 +25,26 @@ src/web/vue-app/dist/
 *.test.html
 *-debug.html
 test-*.html
+
+# Claude Code 开发工具
+.claude*
+CLAUDE.md
+data/CLAUDE.md
+
+# 环境配置
+.env
+.env.local
+
+# 临时文件
+tmp/
+tests/
+*.log
+
+# 构建产物
+src/web/dist/
+src/web/vue-app/dist/
+
+# 运行时数据（部署时生成）
+data/api-sources.json
+data/official-sources.json
+data/runtime-config.json
